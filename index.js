@@ -1,3 +1,6 @@
+const express = require('express')();
+express.get('/', (req, res) => res.send('<!-- auto-pinging 525316393768452098 -->'))
+express.listen(3000);
 const mineflayer = require('mineflayer')
 const fs = require('fs');
 let rawdata = fs.readFileSync('config.json');
@@ -18,7 +21,7 @@ var bot = mineflayer.createBot({
 });
 function getRandomArbitrary(min, max) {
        return Math.random() * (max - min) + min;
-
+ 
 }
 bot.on('login',function(){
 	console.log("Logged In")
@@ -50,8 +53,9 @@ bot.on('time', function() {
         }
     }
 });
-
+ 
 bot.on('spawn',function() {
     connected=1;
 });
-
+ 
+ 
